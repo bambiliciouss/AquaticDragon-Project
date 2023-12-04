@@ -71,15 +71,7 @@ const Branch = () => {
     }, [context.stateUser.isAuthenticated])
   );
 
-  const ListHeader = () => {
-    return (
-      <View style={styles.listHeader}>
-        <Text style={styles.headerItem}>Branch No</Text>
-
-        <Text style={styles.headerItem}>Delivery Fee</Text>
-      </View>
-    );
-  };
+ 
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -93,24 +85,14 @@ const Branch = () => {
               marginBottom: 4,
             }}
             onPress={() =>
-              navigation.navigate("Register as Distributor", {
+              navigation.navigate("Store Branches", {
                 screen: "BranchRegister",
               })
             }
           />
         </View>
 
-        {/* <FlatList
-          data={branchList}
-          ListHeaderComponent={ListHeader}
-          refreshControl={
-            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-          }
-          renderItem={({ item, index }) => (
-            <BranchList item={item} index={index} />
-          )}
-          keyExtractor={(item) => item._id}
-        /> */}
+    
 
         <FlatList
           contentContainerStyle={styles.propertyListContainer}
